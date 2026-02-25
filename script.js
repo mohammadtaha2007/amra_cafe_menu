@@ -74,11 +74,10 @@ window.addEventListener("scroll", () => {
   });
 });
 
-
 // ─── Intro Screen ────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   const introScreen = document.getElementById("intro-screen");
-  const enterBtn    = document.getElementById("enter-menu-btn");
+  const enterBtn = document.getElementById("enter-menu-btn");
   const mainContent = document.getElementById("main-content");
 
   // اگر قبلاً وارد شده بود (اختیاری – با localStorage)
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   enterBtn.addEventListener("click", () => {
     introScreen.classList.add("hidden");
-    
+
     // اختیاری: ذخیره در localStorage که دفعه بعد مستقیم بره منو
     // localStorage.setItem("introSeen", "true");
 
