@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 body {
@@ -330,51 +330,49 @@ body {
     width: 200px;
   }
 
-
   .card {
-  background: #2a1e16;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  transition: 0.3s;
-  height: 290px;
-  margin-bottom: 25px;
-}
+    background: #2a1e16;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+    height: 290px;
+    margin-bottom: 25px;
+  }
 
-.card:hover {
-  transform: translateY(-6px);
-}
+  .card:hover {
+    transform: translateY(-6px);
+  }
 
-.card img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-}
+  .card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
 
-.info h4 {
-  margin-bottom: 15px;
-  font-size: 20px;
-}
+  .info h4 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
 
-.info {
-  padding: 15px;
-  font-size: 20px;
-  margin-bottom: 2px;
-}
+  .info {
+    padding: 15px;
+    font-size: 20px;
+    margin-bottom: 2px;
+  }
 
-.info span {
-  color: #d4a373;
-  font-weight: bold;
-  font-size: 15px;
-}
-
+  .info span {
+    color: #d4a373;
+    font-weight: bold;
+    font-size: 15px;
+  }
 
   .main_title {
-  font-size: 30px;
-  color: #d4a373;
-}
+    font-size: 30px;
+    color: #d4a373;
+  }
 
-.tehran{
-  font-size: 25px;
-}
+  .tehran {
+    font-size: 25px;
+  }
 }
