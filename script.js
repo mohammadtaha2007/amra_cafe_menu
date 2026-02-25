@@ -73,3 +73,29 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+
+// ─── Intro Screen ────────────────────────────────
+document.addEventListener("DOMContentLoaded", () => {
+  const introScreen = document.getElementById("intro-screen");
+  const enterBtn    = document.getElementById("enter-menu-btn");
+  const mainContent = document.getElementById("main-content");
+
+  // اگر قبلاً وارد شده بود (اختیاری – با localStorage)
+  // if (localStorage.getItem("introSeen") === "true") {
+  //   introScreen.classList.add("hidden");
+  //   return;
+  // }
+
+  enterBtn.addEventListener("click", () => {
+    introScreen.classList.add("hidden");
+    
+    // اختیاری: ذخیره در localStorage که دفعه بعد مستقیم بره منو
+    // localStorage.setItem("introSeen", "true");
+
+    // اختیاری: کمی تأخیر برای انیمیشن بهتر
+    setTimeout(() => {
+      introScreen.style.display = "none";
+    }, 800);
+  });
+});
