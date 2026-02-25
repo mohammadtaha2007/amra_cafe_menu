@@ -11,7 +11,7 @@ const closeBtn = document.querySelector(".close");
 cards.forEach((card) => {
   card.addEventListener("click", () => {
     modal.style.display = "flex";
-    document.body.style.overflow = "hidden"; // جلوگیری از اسکرول
+    document.body.style.overflow = "hidden";
 
     modalImg.src = card.dataset.img;
     modalTitle.textContent = card.dataset.title;
@@ -22,7 +22,7 @@ cards.forEach((card) => {
 
 function closeModal() {
   modal.style.display = "none";
-  document.body.style.overflow = "auto"; // برگردوندن اسکرول
+  document.body.style.overflow = "auto";
 }
 
 closeBtn.addEventListener("click", closeModal);
@@ -33,14 +33,12 @@ window.addEventListener("click", (e) => {
   }
 });
 
-// بستن با ESC
 window.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
     closeModal();
   }
 });
 
-// اسکرول نرم با JS
 links.forEach((link) => {
   link.addEventListener("click", function (e) {
     e.preventDefault();
@@ -55,7 +53,6 @@ links.forEach((link) => {
   });
 });
 
-// هایلایت دسته فعال هنگام اسکرول
 window.addEventListener("scroll", () => {
   let current = "";
 
@@ -74,25 +71,14 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ─── Intro Screen ────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   const introScreen = document.getElementById("intro-screen");
   const enterBtn = document.getElementById("enter-menu-btn");
   const mainContent = document.getElementById("main-content");
 
-  // اگر قبلاً وارد شده بود (اختیاری – با localStorage)
-  // if (localStorage.getItem("introSeen") === "true") {
-  //   introScreen.classList.add("hidden");
-  //   return;
-  // }
-
   enterBtn.addEventListener("click", () => {
     introScreen.classList.add("hidden");
 
-    // اختیاری: ذخیره در localStorage که دفعه بعد مستقیم بره منو
-    // localStorage.setItem("introSeen", "true");
-
-    // اختیاری: کمی تأخیر برای انیمیشن بهتر
     setTimeout(() => {
       introScreen.style.display = "none";
     }, 800);

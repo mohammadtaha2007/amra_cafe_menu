@@ -10,8 +10,9 @@ body {
   color: #f5e6d3;
 }
 
-/* LANDING */
-/* ─── Intro / Welcome Screen ──────────────────────────────── */
+/* ================================================== */
+
+/* بخش معرفی */
 
 .intro-screen {
   position: fixed;
@@ -104,7 +105,10 @@ body {
   height: auto;
 }
 
-/* header */
+/* ================================================== */
+
+/* نام */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -123,13 +127,19 @@ body {
   margin-top: 5px;
 }
 
-/* Layout */
+/* ================================================== */
+
+/* بدنه اصلی */
+
 .layout {
   display: flex;
   flex-direction: row-reverse;
 }
 
-/* Sidebar */
+/* ================================================== */
+
+/* نوار منوی کناری */
+
 .sidebar {
   width: 260px;
   background: linear-gradient(180deg, #2a1e16, #1a1410);
@@ -201,6 +211,8 @@ body {
   background: #6b3e26;
 }
 
+/* آیکون های نوار منوی کناری */
+
 .breakfast-icon {
   position: absolute;
   width: 60px;
@@ -215,49 +227,52 @@ body {
   top: 335px;
 }
 
-.pasta-icon {
+.appetizer-icon {
   position: absolute;
   width: 60px;
   height: auto;
   top: 555px;
 }
 
-.sandwich-icon {
+.pasta-icon {
   position: absolute;
   width: 60px;
   height: auto;
   top: 770px;
 }
 
-.pizza-icon {
+.sandwich-icon {
   position: absolute;
   width: 60px;
   height: auto;
   top: 990px;
 }
 
-.cafe-icon {
+.panini-icon {
   position: absolute;
   width: 60px;
   height: auto;
   top: 1200px;
 }
 
-.diet-icon {
+.cafe-icon {
   position: absolute;
   width: 60px;
   height: auto;
-  top: 1420px;
+  top: 1400px;
 }
 
-.drink-icon {
+.organic-drink-icon {
   position: absolute;
   width: 60px;
   height: auto;
   top: 1630px;
 }
 
-/* Content */
+/* ================================================== */
+
+/* محتوا */
+
 .content {
   flex: 1;
   padding: 40px;
@@ -275,7 +290,10 @@ body {
   font-size: 50px;
 }
 
-/* Cards */
+/* ================================================== */
+
+/* کارت ها */
+
 .foods {
   display: grid;
   grid-template-columns: 1fr;
@@ -319,7 +337,9 @@ body {
   font-size: 40px;
 }
 
-/* Modal Background */
+/* ================================================== */
+
+/* جزییات هر آیتم */
 .modal {
   display: none;
   position: fixed;
@@ -332,7 +352,6 @@ body {
   animation: fadeIn 0.3s ease;
 }
 
-/* Modal Content */
 .modal-content {
   background: #2a1e16;
   padding: 30px;
@@ -365,7 +384,8 @@ body {
   color: red;
 }
 
-/* Close Button */
+/* دکمه بسته شدن جزییات هر آیتم */
+
 .close {
   position: absolute;
   top: 15px;
@@ -379,7 +399,7 @@ body {
   color: orange;
 }
 
-/* Animations */
+/* انیمشن جزییات هر آیتم */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -400,18 +420,15 @@ body {
   }
 }
 
-/* ────────────────────────────────────────────────
-   MOBILE FIRST + OVERRIDE قوی
-───────────────────────────────────────────────── */
+/* ================================================== */
 
-/* پایه = موبایل (همیشه اجرا می‌شود مگر اینکه بزرگ‌تر override شود) */
+/* رسپانسیو دسکتاپ مود */
+
 .foods {
   display: grid;
   grid-template-columns: 1fr;
   gap: 18px 14px;
 }
-
-/* فقط وقتی صفحه واقعاً موبایل/کوچک است (تا 767px) */
 
 /* دسکتاپ */
 @media screen and (min-width: 992px) {
