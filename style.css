@@ -11,12 +11,11 @@ body {
 }
 
 /* header */
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
 }
 
 .logo {
@@ -24,15 +23,15 @@ body {
   height: auto;
 }
 
-.main_title{
-    font-size: 28px;
-    color: #d4a373;
+.main_title {
+  font-size: 28px;
+  color: #d4a373;
 }
 
-.tehran{
-    font-size: 18px;
-    color: #d4a373;
-    margin-top: 5px;
+.tehran {
+  font-size: 18px;
+  color: #d4a373;
+  margin-top: 5px;
 }
 
 /* Layout */
@@ -50,6 +49,7 @@ body {
   top: 0;
   padding: 30px 20px;
   border-left: 3px solid #6b3e26;
+  font-size: 30px;
 }
 
 .sidebar h3 {
@@ -72,6 +72,7 @@ body {
   display: block;
   border-radius: 8px;
   transition: 0.3s;
+  margin-bottom: 50px;
 }
 
 .sidebar a:hover,
@@ -216,51 +217,63 @@ body {
 }
 
 
-/* ============================= */
-/* 📱 Mobile - Sidebar stays side */
-/* ============================= */
 
-@media (max-width: 768px) {
 
-  .layout {
-    flex-direction: row-reverse;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ────────────────────────────────────────────────
+   MOBILE FIRST + OVERRIDE قوی
+───────────────────────────────────────────────── */
+
+/* پایه = موبایل (همیشه اجرا می‌شود مگر اینکه بزرگ‌تر override شود) */
+.foods {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 14px;
+}
+
+/* فقط وقتی صفحه واقعاً موبایل/کوچک است (تا 767px) */
+@media screen and (max-width: 767px) {
+  .foods {
+    grid-template-columns: 1fr !important ;
+    gap: 20px 16px !important ;
   }
 
-  /* سایدبار باریک‌تر */
   .sidebar {
-    width: 110px;
-    padding: 20px 10px;
-  }
-
-  .sidebar h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
+    width: 94px  ;
+    padding: 12px 6px  ;
   }
 
   .sidebar a {
-    font-size: 50px;
-    padding: 8px 6px;
+    min-height: 56px  ;     /* ضربه زدن راحت‌تر */
+    font-size: 15px  ;
+    padding: 8px 4px  ;
   }
+}
 
-  /* محتوا */
-  .content {
-    padding: 20px 15px;
-  }
-
-  /* 👇 محصولات تک ستون */
+/* دسکتاپ */
+@media screen and (min-width: 992px) {
   .foods {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr)  ;
+    gap: 28px  ;
   }
 
-  .card img {
-    height: 200px;
-  }
-
-  .main_title {
-    font-size: 20px;
-  }
-
-  .logo {
-    width: 100px;
+  .sidebar {
+    width: 270px  ;
   }
 }
