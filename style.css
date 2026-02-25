@@ -271,7 +271,7 @@ body {
     overflow: hidden;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
     transition: 0.3s;
-    height: 300px;
+    height: 400px;
   }
   .card img {
     width: 100%;
